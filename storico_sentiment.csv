@@ -1,0 +1,25 @@
+timestamp,testo,sentiment,probabilità_positivo
+2025-08-06 11:31:16,il prodotto funziona correttamente e sono soddisfatto,positivo,0.5209443113332262
+2025-08-06 12:09:24,,positivo,1.0
+2025-08-06 12:10:17,,,0.0
+2025-08-06 12:12:23,"il prodotto funziona correttamente e sono soddisfatto
+",,0.0
+2025-08-06 12:12:23,"il prodotto funziona correttamente e sono soddisfatto
+",positivo,0.5209443113332262
+2025-08-06 12:13:01,"sono contento il prodotto funziona bene
+",,0.0
+2025-08-06 12:13:35,"il prodotto funziona correttamente e sono soddisfatto
+",,0.0
+2025-08-06 12:13:35,"il prodotto funziona correttamente e sono soddisfatto
+",positivo,0.5209443113332262
+2025-08-06 12:14:08,"sono contento funziona bene
+",,0.0
+2025-08-06 12:17:44,,,0.0
+2025-08-06 12:18:08,il prodotto funziona correttamente e sono soddisfatto,,0.0
+2025-08-06 12:18:08,il prodotto funziona correttamente e sono soddisfatto,positivo,0.5209443113332262
+2025-08-06 12:18:24,il prodotto ok,,0.0
+2025-08-06 12:18:24,il prodotto ok,positivo,0.522835869183426
+2025-08-06 12:18:36,il prodotto bello,,0.0
+2025-08-06 12:18:37,il prodotto bello,positivo,0.522835869183426
+2025-08-06 12:19:02,il prodotto bello e funziona,,0.0
+2025-08-06 12:19:02,il prodotto bello e funziona,negativo,0.49432775139918866
