@@ -1,11 +1,7 @@
-
----
-
-## 📦 `requirements.txt`  
-Elenca i pacchetti necessari per l’app:model_lr.pkl,model_rf.pkl,Vali_INCROCIATA_LR_RF_ottimizzata_con_20_frasi_grafici_carica_frasi_utente.py,app.py,vectorizer.pkl
-
-```txt
 streamlit==1.29.0
 scikit-learn==1.3.0
 pandas==2.1.0
 matplotlib==3.8.0
+plotly==5.18.0
+joblib==1.3.2
+
