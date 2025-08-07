@@ -8,31 +8,31 @@ from datetime import datetime
 import os
 import plotly.graph_objects as go
 
-# 📦 Carica i modelli
+# Carica i modelli
 lr_model = joblib.load('model_lr.pkl')
 rf_model = joblib.load('model_rf.pkl')
 vectorizer = joblib.load('vectorizer.pkl')
 
-# 🎨 Titolo
-st.title("🧠 Analisi del Sentiment in Tempo Reale")
+# Titolo
+st.title("Analisi del Sentiment in Tempo Reale")
 st.write("Inserisci una frase e scopri se il sentiment è positivo o negativo.")
 
-# 🔘 Selettore del modello
+# Selettore del modello
 model_choice = st.radio("Scegli il modello:", ["Logistic Regression", "Random Forest"])
 
 #prediction=""
 #confidence=0
-# 📝 Input utente
+# Input utente
 user_input = st.text_area("✏️ Scrivi qui la tua recensione:")
 
-# 🔮 Analisi
+# Analisi
 #NOTA:ho assegnato dei valori altrimenti va in errore nella generazione del grafico
 
 if st.button("Analizza Sentiment"):
     if user_input.strip() == "":
-        st.warning("⚠️ Inserisci del testo prima di analizzare.")
+        st.warning("Inserisci del testo prima di analizzare.")
     else:
-        # ✨ Analisi del testo
+        # Analisi del testo
         X_input = vectorizer.transform([user_input])
         model = lr_model if model_choice == "Logistic Regression" else rf_model
         prediction = model.predict(X_input)[0]
@@ -40,12 +40,12 @@ if st.button("Analizza Sentiment"):
         class_index = list(model.classes_).index("positivo")
         confidence = proba[class_index]
 
-        # ✅ Mostra risultato
-        st.success(f"✅ Sentiment previsto: **{prediction.upper()}**")
+        # Mostra risultato
+        st.success(f"Sentiment previsto: **{prediction.upper()}**")
         st.progress(confidence)
-        st.write(f"🔎 Probabilità che sia positivo: **{confidence:.2%}**")
+        st.write(f"Probabilità che sia positivo: **{confidence:.2%}**")
 
-        # 💾 Salva su CSV — dentro il blocco!
+        # Salva su CSV — dentro il blocco!
         data = {
             "timestamp": [datetime.now().strftime("%Y-%m-%d %H:%M:%S")],
             "testo": [user_input],
